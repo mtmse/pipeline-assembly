@@ -335,7 +335,9 @@ init() {
 
 run() {
     OPTS="-Dorg.daisy.pipeline.ws.localfs=true -Dorg.daisy.pipeline.ws.authentication=false"
-    MAIN=org.apache.felix.main.Main
+    #MAIN=org.apache.felix.main.Main
+    # for the GUI
+    MAIN=org.daisy.pipeline.swt.launcher.Main
     case "$1" in
         # 'stop')
         #     MAIN=org.apache.karaf.main.Stop
