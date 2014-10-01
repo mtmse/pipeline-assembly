@@ -615,7 +615,7 @@
                 <artifactItem>
                   <groupId>org.idpf</groupId>
                   <artifactId>epubcheck</artifactId>
-                  <version>4.0.0-alpha9-SNAPSHOT</version>
+                  <version>4.0.0-alpha11</version>
                 </artifactItem>
                 <artifactItem>
                   <groupId>com.google.guava</groupId>
