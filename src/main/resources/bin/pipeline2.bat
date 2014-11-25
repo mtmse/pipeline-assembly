@@ -209,7 +209,8 @@ if "%PIPELINE2_PROFILER%" == "" goto :RUN
 
 :RUN
     SET OPTS=-Dorg.daisy.pipeline.ws.localfs=true -Dorg.daisy.pipeline.ws.authentication=false
-    SET MAIN=org.apache.felix.main.Main
+    rem SET MAIN=org.apache.felix.main.Main
+    SET MAIN=org.daisy.pipeline.felix.Main
     SET SHIFT=false
 
 :RUN_LOOP
