@@ -275,6 +275,7 @@ setupDebugOptions() {
 }
 
 setupDefaults() {
+    # add startOnFirstThread for the GUI
     DEFAULT_JAVA_OPTS="-Xms$JAVA_MIN_MEM -Xmx$JAVA_MAX_MEM "
 
     #Set the JVM_VENDOR specific JVM flags
@@ -369,9 +370,11 @@ run() {
             export PIPELINE2_LOCAL
 
     fi
-    MAIN=org.apache.felix.main.Main
     OPTS="$PIPELINE2_LOCAL $PIPELINE2_AUTH"
 
+    #MAIN=org.apache.felix.main.Main
+    # for the GUI
+    MAIN=org.daisy.pipeline.felix.Main
     case "$1" in
         # 'stop')
         #     MAIN=org.apache.karaf.main.Stop
