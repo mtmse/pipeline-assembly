@@ -15,6 +15,13 @@ artifactoryRpm {
 	distributionDir = "target/rpm/pipeline2/RPMS/x86_64"
 }
 
+task copyRpm(type: Copy) {
+	from 'target/rpm/pipeline2/RPMS/x86_64'
+	into 'build/distributions'
+}
+
+promoteToStageRepo.dependsOn copyRpm
+
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
