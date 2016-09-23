@@ -11,8 +11,22 @@ buildscript {
     }
 }
 
+def getVersion() {
+	FileTree tree = fileTree(dir: 'target/rpm/pipeline2/RPMS/x86_64')
+	tree.include('*.rpm')
+	def r = (tree.singleFile.name =~ /-([\d]+\.[\d]+\.[\d]+-[\d]+)/)[0][1]
+	return r
+}
+
+version = getVersion()
+
+task printVersion() << {
+	println version
+}
+
 artifactoryRpm {
 	distributionDir = "target/rpm/pipeline2/RPMS/x86_64"
+	packageName = "pipeline2"
 }
 
 task copyRpm(type: Copy) {
