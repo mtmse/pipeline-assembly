@@ -11,14 +11,13 @@ buildscript {
     }
 }
 
-def getVersion() {
-	FileTree tree = fileTree(dir: 'target/rpm/pipeline2/RPMS/x86_64')
-	tree.include('*.rpm')
-	def r = (tree.singleFile.name =~ /-([\d]+\.[\d]+\.[\d]+-[\d]+)/)[0][1]
-	return r
+def getPomVersion() {
+	def pomns = new groovy.xml.Namespace("http://maven.apache.org/POM/4.0.0")
+	def pom = new XmlParser().parse(file('pom.xml'))
+	return pom[pomns.version].text()
 }
 
-version = getVersion()
+version = getPomVersion() + "-1"
 
 task printVersion() << {
 	println version
