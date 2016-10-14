@@ -95,6 +95,39 @@
         <artifactId>mod-mtm</artifactId>
         <version>1.7.0</version>
       </dependency>
+      <!-- 
+      <dependency>
+        <groupId>se.mtm.addons</groupId>
+        <artifactId>mtm-dotify-addons</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+       -->
+       <!-- Temporary -->
+      <dependency>
+        <groupId>org.daisy.dotify</groupId>
+        <artifactId>dotify.api</artifactId>
+        <version>2.10.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.dotify</groupId>
+        <artifactId>dotify.formatter.impl</artifactId>
+        <version>2.6.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.dotify</groupId>
+        <artifactId>dotify.task-api</artifactId>
+        <version>2.3.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.dotify</groupId>
+        <artifactId>dotify.task-runner</artifactId>
+        <version>1.1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.daisy.dotify</groupId>
+        <artifactId>dotify.task.impl</artifactId>
+        <version>2.8.0</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <build>
