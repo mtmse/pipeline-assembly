@@ -951,6 +951,10 @@
                   <artifactId>mod-mtm</artifactId>
                 </artifactItem>
                 <artifactItem>
+                  <groupId>se.mtm.addons</groupId>
+                  <artifactId>mtm-dotify-addons</artifactId>
+                </artifactItem>
+                <artifactItem>
                   <groupId>org.daisy.pipeline.modules.braille</groupId>
                   <artifactId>pef-calabash</artifactId>
                 </artifactItem>
